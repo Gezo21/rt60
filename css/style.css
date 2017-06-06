@@ -1,0 +1,81 @@
+/* Palette 
+HEX: #b2b2b2 gris
+HEX: #f4e1d2 beige
+HEX: #f18973 naranja
+HEX: #bc5a45 marron */
+
+body {
+   background-color: #f4e1d2;
+}
+
+h1 {
+   color: #bc5a45;
+   margin: 15px;
+}
+
+input {
+   margin-right: 15px;
+}
+
+label {
+   margin-left: 5px;   
+}
+
+rect {
+   fill: #f18973;
+  
+}
+
+.board {
+   background-color: #b2b2b2;
+   border-radius: 10px;
+   border: black solid 2px;
+   box-shadow: 1px 5px 5px gray;
+  
+}
+
+.graph-area {
+   margin: 35px 10px 10px 10px;
+}
+
+.dimensions {
+   margin-top: 5px;
+}
+
+.freqs {
+   word-spacing:15px;
+   padding-right: 30px;
+}
+
+.cube {
+   fill: #bc5a45;
+   stroke: black;
+   stroke-width:3px;
+   
+   
+}
+
+.cube-fondo {
+   fill: #bc5a45;
+   stroke: black;
+   stroke-width:3px;
+   opacity: 0.8;
+   
+   
+}
+
+.cube-line {
+   stroke: black;
+   stroke-width: 3px;
+   opacity: 0.7;
+}
+
+.text-rt {
+   font-size: 0.8em;
+   opacity: 0;
+}
+
+#footer {
+   font-size: 0.6em;
+   margin-bottom: 1em;
+}

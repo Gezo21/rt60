@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>RT60 calc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+   <h1 class="text-center">RT60 Calculator</h1>
+   <p>This calculator allows you to estimate the reverberation time (RT60) of a conventional room. This is done by using the Sabine's formula. Just enter the room's dimensions and the most significant material of each wall, floor and ceiling. The wall number is irrelevant for the calculation. All calculations are made in metric system.</p>
+
+<div class="row">
+   <div class="col-sm-8">
+      <div class="board">   
+         <form>
+            <div class="form-group text-center dimensions">
+               <label for="room-width">Width (m):</label>
+               <input type="number" id="room-width" value="1" min="1" max="50"/>
+               <label for="room-height">Height (m):</label>
+               <input type="number" id="room-height" value="1" min="1" max="50"/>
+               <label for="room-length">Length (m):</label>
+               <input type="number" id="room-length" value="1" min="1" max="50"/>
+            </div>
+            <div class="form-group materials">
+               <label for="material-1">Material wall 1:</label>
+               <select id="material-1" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+               <label for="material-2">Material wall 2:</label>
+               <select id="material-2" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+               <label for="material-3">Material wall 3:</label>
+               <select id="material-3" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+               <label for="material-4">Material wall 4:</label>
+               <select id="material-4" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+               <label for="material-5">Material floor:</label>
+               <select id="material-5" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+               <label for="material-6">Material ceiling:</label>
+               <select id="material-6" class="form-control">
+                 <option value="1">Brick</option>
+                 <option value="2">Concrete painted</option>
+                 <option value="3">Plaster</option>
+                 <option value="4">Wood</option>
+                 <option value="5">Carpet on concrete</option>
+               </select>
+            </div>
+            <button type="button" id="calculate" class="btn btn-primary">Calculate!</button>
+         </form>
+      </div>
+   </div>
+   <div class="col-sm-4 text-center"> <!-- Cube drawing -->
+      <svg width="200" height="200">
+         <rect class="cube-fondo" width="100" height="80" x="10" y="20"></rect>
+         <rect class="cube" width="100" height="80" x="60" y="45"></rect>
+         <line class="cube-line" x1="10" y1="20" x2="60" y2="45"></line>
+         <line class="cube-line" x1="110" y1="20" x2="160" y2="45"></line>
+         <line class="cube-line" x1="10" y1="100" x2="60" y2="125"></line>
+         <text x="105" y="145">W</text>
+         <text x="165" y="95">H</text>
+         <text x="20" y="125">L</text>
+         
+      </svg>
+   </div>
+</div> <!-- Fin de la fila -->
+
+<div class="row">
+   <div class="col-sm-12 text-center graph-area">
+   <h4 class="">Reverb Time by Frequency (seconds)</h4>
+   <svg id="graph" width="400" height="200">
+      <rect class="graph-rect" width="50" height="1" x="10" y="170"></rect>
+      <rect class="graph-rect" width="50" height="1" x="70" y="170"></rect>
+      <rect class="graph-rect" width="50" height="1" x="130" y="170"></rect>
+      <rect class="graph-rect" width="50" height="1" x="190" y="170"></rect>
+      <rect class="graph-rect" width="50" height="1" x="250" y="170"></rect>
+      <rect class="graph-rect" width="50" height="1" x="310" y="170"></rect>
+      <line id="y-axis" x1="5" y1="170" x2="380" y2="170" style="stroke:black"></line>
+      <line x1="5" y1="170" x2="5" y2="1" style="stroke:black"></line>
+      <text class="text-rt" x="25" y="15">0</text>
+      <text class="text-rt" x="85" y="15">0</text>
+      <text class="text-rt" x="145" y="15">0</text>
+      <text class="text-rt" x="205" y="15">0</text>
+      <text class="text-rt" x="265" y="15">0</text>
+      <text class="text-rt" x="325" y="15">0</text>
+   </svg>
+      <p class="freqs">125Hz 250Hz 500Hz 1kHz 2kHz 4kHz</p>
+   </div>
+</div>
+   
+   
+<div id="footer">&copy; 2017 Marco Galvan.</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
