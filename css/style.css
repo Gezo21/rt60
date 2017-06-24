@@ -1,15 +1,13 @@
 /* Palette 
-HEX: #b2b2b2 gris
-HEX: #f4e1d2 beige
-HEX: #f18973 naranja
-HEX: #bc5a45 marron */
+HEX: #1e4198 azul
+HEX: #e2c017 amarillo
+HEX: #e27517 naranja */
 
 body {
-   background-color: #f4e1d2;
+   color: #1e4198;;
 }
 
 h1 {
-   color: #bc5a45;
    margin: 15px;
 }
 
@@ -22,12 +20,13 @@ label {
 }
 
 rect {
-   fill: #f18973;
+   fill: #e27517;
   
 }
 
 .board {
-   background-color: #b2b2b2;
+   background-color: #1e4198;
+   color: #
    border-radius: 10px;
    border: black solid 2px;
    box-shadow: 1px 5px 5px gray;
@@ -48,7 +47,7 @@ rect {
 }
 
 .cube {
-   fill: #bc5a45;
+   fill: #e27517;
    stroke: black;
    stroke-width:3px;
    
@@ -56,7 +55,7 @@ rect {
 }
 
 .cube-fondo {
-   fill: #bc5a45;
+   fill: #e27517;
    stroke: black;
    stroke-width:3px;
    opacity: 0.8;
