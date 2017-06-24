@@ -4,7 +4,8 @@ HEX: #e2c017 amarillo
 HEX: #e27517 naranja */
 
 body {
-   color: #1e4198;;
+   color: #1e4198;
+   font-family: 'Advent Pro', sans-serif;
 }
 
 h1 {
