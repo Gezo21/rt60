@@ -24,6 +24,10 @@ rect {
   
 }
 
+button {
+   background-color: #e27517;
+}
+
 .board {
    background-color: #1e4198;
    color: #e2c017;
