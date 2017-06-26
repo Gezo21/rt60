@@ -6,12 +6,12 @@ HEX: #e27517 naranja */
 body {
    color: #1e4198;
    font-family: 'Advent Pro', sans-serif;
-   font-size: 1.1em;
+   font-size: 1.2em;
 }
 
 h1 {
    margin: 15px;
-   font-size: 2em;
+   font-size: 2.5em;
 }
 
 input {
